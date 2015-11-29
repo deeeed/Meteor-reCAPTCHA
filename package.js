@@ -1,14 +1,14 @@
 Package.describe({
-    name: "appshore:recaptcha",
-    summary: "Implementation of Google reCAPTCHA V2 for Meteor",
-    git: "https://github.com/appshore/Meteor-reCAPTCHA.git",
+    name: "deeeed:recaptcha",
+    summary: "(timeout + configurable callbacks) Implementation of Google reCAPTCHA V2 for Meteor",
+    git: "https://github.com/deeeed/Meteor-reCAPTCHA.git",
     version: "2.0.6",
     license: "MIT"
 });
 
 Package.onUse(function(api) {
 
-    api.versionsFrom('1.0.2');
+    api.versionsFrom('1.1.0');
 
     api.use([
         'templating',
