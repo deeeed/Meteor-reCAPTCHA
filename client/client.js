@@ -34,6 +34,12 @@ Template.reCAPTCHA.rendered = function() {
         // timeout: reCAPTCHA.settings.timeout
         timeout: 500
     }).done(function() {
-      reCAPTCHA.settings["ajax-done"](arguments);
-    }).fail(reCAPTCHA.settings["ajax-fail"]);
+      if($.isFunction(reCAPTCHA.settings["ajax-done"])) {
+        reCAPTCHA.settings["ajax-done"](arguments);
+      }
+    }).fail(function() {
+      if($.isFunction(reCAPTCHA.settings["ajax-fail"]) {
+        reCAPTCHA.settings["ajax-fail"](arguments);
+      }
+    });
 };
