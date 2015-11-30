@@ -38,7 +38,7 @@ Template.reCAPTCHA.rendered = function() {
         reCAPTCHA.settings["ajax-done"](arguments);
       }
     }).fail(function() {
-      if($.isFunction(reCAPTCHA.settings["ajax-fail"]) {
+      if($.isFunction(reCAPTCHA.settings["ajax-fail"])) {
         reCAPTCHA.settings["ajax-fail"](arguments);
       }
     });
