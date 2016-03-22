@@ -4,7 +4,11 @@ reCAPTCHA = {
       "ajax-done": null,
       "ajax-fail": null,
       "captcha-callback": null, // Add callback property after captcha request
-      "captcha-expired": null // Add callback for expired captcha
+      "captcha-expired": null, // Add callback for expired captcha
+      theme: "light",
+      type: "image",
+      size: "normal",
+      tabindex: 0
     },
 
     config: function(settings) {
@@ -14,9 +18,8 @@ reCAPTCHA = {
 
 
 window.onloadcaptcha = function() {
-    $('[name=reCaptcha]').each( function(index){
+    $('[name=reCaptcha]').each(function(){
         $(this).empty();
-
         grecaptcha.render(this.id, {
                 sitekey: reCAPTCHA.settings.publickey,
                 theme: reCAPTCHA.settings.theme,
